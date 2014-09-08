@@ -1,0 +1,478 @@
+body {
+    font: 14px "微软雅黑","宋体","Lucida Grande", Helvetica, Arial, sans-serif;
+}
+.headsty{
+    width:100%;
+    text-align: right;
+    padding-right:20px;
+    height:auto;
+}
+.rightalignsty{
+    text-align: right;
+    line-height: 45px;
+    color:#dcdcdc;
+}
+a {
+  color:#f3b40a;
+    margin-right:10px;
+}
+#MessgContent{
+    width:100%;
+    height:350px;
+    border:solid 1px #ddffdd;
+    overflow-y:auto;
+    font-size:11px;
+    font-family:'微软雅黑 宋体 arial';
+}
+.mousesty{
+    cursor: pointer;
+}
+.mousesty:hover{
+    color:#ffbbbb;
+}
+/*主页模板相关样式*/
+.txtsty{
+    width: 100%;
+    height: 50px;
+}
+.usernamesty{
+    margin-left:8px;
+    margin-right:8px;
+}
+.rowsty{
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.rowcontent{
+    width: 700px;
+    margin: 0 auto;
+}
+/*博客页面样式*/
+.blogcontent{
+    width: 600px;
+    margin: 0 auto;
+    font-size:14px;
+    font-family: "微软雅黑","宋体","Lucida Grande", Helvetica, Arial;
+}
+.blogmenu{
+    width:100%;
+    height:112px;
+    border:solid 1px #dcdcdc;
+}
+.blogmenu li{
+    width:140px;
+    height: 110px;
+    list-style: none;
+    float: left;
+    margin-left:0px;
+}
+.metro .tab-control .tabs >div{
+    display: block;
+    float: left;
+    position: relative;
+}
+.blogmenu li a{
+    width:140px;
+    height: 110px;
+    list-style: none;
+    cursor:pointer;
+}
+.blogmenu_text{
+    background: url(metroui/images/nav224.png) no-repeat -111px 0px;
+}
+.blogmenu_text:hover{
+    background: url(metroui/images/nav224.png) no-repeat -111px -133px;
+}
+.blogmenu_img{
+    background: url(metroui/images/nav224.png) no-repeat -251px 0px;
+}
+.blogmenu_img:hover{
+    background: url(metroui/images/nav224.png) no-repeat -251px -133px;
+}
+.blogmenu_music{
+    background: url(metroui/images/nav224.png) no-repeat -391px 0px;
+}
+.blogmenu_music:hover{
+    background: url(metroui/images/nav224.png) no-repeat -391px -133px;
+}
+.blogmenu_redio{
+    background: url(metroui/images/nav224.png) no-repeat -531px 0px;
+}
+.blogmenu_redio:hover{
+    background: url(metroui/images/nav224.png) no-repeat -531px -133px;
+}
+.blogcontentsty{
+    width:562px;
+    min-width:562px;
+    max-width:562px;
+    height:250px;
+    max-height:250px;
+    min-height:250px;
+    border:solid 1px #dcdcdc;
+}
+
+/*新增博客样式 start*/
+.blogtextcontent{
+    width: 100%;
+    height: auto;
+    font-size:14px;
+    font-family: "微软雅黑","宋体","Lucida Grande", Helvetica, Arial;
+}
+.blogtextcontent div{
+    width: 100%;
+    margin-top:8px;
+}
+.blogtitlesty{
+    width:100%;
+    border-width: 0px;
+    line-height:30px;
+    height:30px;
+    font-size:14px;
+    font-family: "微软雅黑","宋体","Lucida Grande", Helvetica, Arial;
+}
+.blogdetailsty{
+    width:100%;
+    border-width: 0px;
+    border-top:dotted 1px #dcdcdc;
+    height:180px;
+    font-size:14px;
+    font-family: "微软雅黑","宋体","Lucida Grande", Helvetica, Arial;
+}
+.blogtagstydiv{
+    border:solid 1px #dcdcdc;
+    width:100%;
+    min-height:40px;
+    height: auto;
+}
+.blogtagtxtpanel{
+    float: left;
+    position: relative;
+}
+.blogtagtxtlabel{
+    float: left;
+    height:30px;
+    line-height:30px;
+    padding: 0 1px;
+    margin-right: 8px;
+    color: #aaa;
+    font-size: 12px;
+    white-space: nowrap;
+    cursor:pointer;
+}
+.blogtagtxtlabel:hover{
+    text-decoration: line-through;
+}
+.blogtagtxtlabel:before{
+    content:"#";
+}
+.clearfloatsty{
+    clear: both;
+    width:0px;
+    height:0px;
+    font-size: 0px;
+}
+.blogtagtxtsty{
+    font-family: "微软雅黑","宋体","Lucida Grande", Helvetica, Arial;
+    position: relative;
+    z-index: 2;
+    min-width: 60px;
+    width:200px;
+    height:30px;
+    line-height:30px;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    color: #333;
+    border: 0;
+    outline: 0;
+}
+.blogtagimgsty{
+    width: 15px;
+    margin: 10px;
+    float: left;
+    height: 18px;
+}
+.blogtagcontentsty{
+    float: left;
+    width: 562px;
+    cursor:text;
+    line-height: 30px;
+    height: auto;
+}
+.pubItemdiv
+{
+    padding:5px;
+    width:100%;
+}
+.pubItemdiv>select{
+    width:120px;
+    height:30px;
+    border-radius:5px;
+    line-height:50px;
+    font-size:14px;
+    font-family: "微软雅黑","宋体","Lucida Grande", Helvetica, Arial;
+}
+#blogimglist{
+    float: left;
+    max-width:450px;
+    width: auto;
+    height:93px;
+    overflow-y:auto;
+}
+.clearbothdiv{
+    clear:both;
+    width:0px;
+    height: 0px;
+    font-size:0px;
+}
+.blognewimgsty{
+    width: 93px;
+    height: 80px;
+    border: solid 5px #dcdcdc;
+    margin-right: 8px;
+}
+/*新增博客样式 end*/
+
+/*音乐博客相关样式*/
+.musicsearchliststy{
+    margin-top: -25px;
+    border:solid 1px #dcdcdc;
+    height: auto;
+    max-height:100px;
+    overflow-y:auto;
+    width: 100%;
+    display: none;
+}
+.musicsearchliststy>ul>li{
+    list-style:none;
+    cursor:pointer;
+    font-family: "微软雅黑","宋体","Lucida Grande", Helvetica, Arial;
+    height:20px;
+    line-height:20px;
+}
+.musicsearchliststy>ul>li:hover{
+    list-style:none;
+    cursor:pointer;
+    background-color:#92c0e0;
+}
+/*用户注册*/
+#userphotodiv{
+    width: 80px;
+    height:100px;
+}
+.userphotoimgsty{
+    width: 80px;
+    height:90px;
+    border: solid 5px #dcdcdc;
+}
+/*index 首页样式*/
+.indexcontent{
+    width: 1000px;
+    margin: 0 auto;
+    font-size:14px;
+    font-family: "微软雅黑","宋体","Lucida Grande", Helvetica, Arial;
+    padding-top: 30px;
+}
+#indexleft{
+    width: 680px;
+    float: left;
+}
+#indexright{
+    float: right;
+    width: 230px;
+    padding: 0 0 30px;
+    border:solid 1px #dcdcdc;
+}
+.bmlistitemsty{
+    /*margin: 20px 0 16px;*/
+    /*padding: 0;*/
+    /*display: block;*/
+    /*clear: both;*/
+    /*height: 0;*/
+    /*text-align: left;*/
+    /*margin-bottom: 16px;*/
+    color: rgb(68, 68, 68);
+    display: block;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei','微软雅黑', tahoma, arial, simsun,'宋体';
+    font-size: 12px;
+    height:auto;
+    margin-bottom: 16px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    text-align: left;
+    width: 674px;
+}
+.bmlistitemimg{
+    float: left;
+    padding: 0;
+    margin: 0;
+    width:68px;
+    height:68px;
+    background-color:#ffbbbb;
+}
+.bmlistitemcontent{
+    float: right;
+    padding: 0;
+    margin: 0;
+    width:585px;
+    height: auto;
+}
+.blogtopdiv{
+    -webkit-background-clip: border-box;
+    -webkit-background-origin: padding-box;
+    -webkit-background-size: auto;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url(../images/isay24.png?021);
+    background-origin:padding-box;
+    background-position: 0px 0px;
+    background-size: auto;
+    color: rgb(68, 68, 68);
+    display: block;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei','微软雅黑', tahoma, arial, simsun,'宋体';
+    font-size: 12px;
+    height: 24px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    text-align: left;
+    width: 585px;
+}
+.blogtoprightdiv{
+    -webkit-background-clip: border-box;
+    -webkit-background-origin: padding-box;
+    -webkit-background-size: auto;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url(../images/isay24.png?021);
+    background-origin: padding-box;
+    /*background-position: -787px 0px;*/
+    background-position: -670px 0px;
+    background-size: auto;
+    color: rgb(68, 68, 68);
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei','微软雅黑', tahoma, arial, simsun,'宋体';
+    font-size: 12px;
+    height: 20px;
+    outline-color: rgb(68, 68, 68);
+    outline-style: none;
+    outline-width: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-align: left;
+    text-decoration: none solid rgb(68, 68, 68);
+    text-indent: -2000px;
+    width: 21px;
+}
+.blogymdiv{
+    -webkit-background-clip: border-box;
+    -webkit-background-origin: padding-box;
+    -webkit-background-size: auto;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url(../images/isay24.png?021);
+    background-origin: padding-box;
+    background-position: -1015px 0px;
+    background-repeat: repeat-y;
+    background-size: auto;
+    color: rgb(68, 68, 68);
+    display: block;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei','微软雅黑', tahoma, arial, simsun,'宋体';
+    font-size: 12px;
+
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 28px;
+    padding-left: 53px;
+    padding-right: 32px;
+    padding-top: 3px;
+    text-align: left;
+    width: 585px;
+}
+.blogymdiv1{
+    color: rgb(68, 68, 68);
+    display: block;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei','微软雅黑', tahoma, arial, simsun,'宋体';
+    font-size: 14px;
+    height: 19px;
+    line-height: 19px;
+    margin-bottom: 16px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    position: relative;
+    text-align: left;
+    width: 500px;
+}
+.blogymdiv2{
+    width:100%;
+    height: auto;
+}
+.clearbothsty{
+    clear:both;
+    font-size:0px;
+    width:0px;
+    height:0px;
+    line-height:0px;
+}
+.contentimgdiv{
+    width: 164px;
+    cursor: pointer;
+    position: relative;
+}
+.contentimgdiv img{
+    width: 100%;
+    height:auto;
+    margin-top:10px;
+}
+.contentimgdiv span{
+    cursor: pointer;
+}
+.contentimgtol{
+    bottom: 5px;
+    background-color: rgb(68, 68, 68);
+    color:#ffffff;
+    cursor: pointer;
+    display: block;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei','微软雅黑', tahoma, arial, simsun,'宋体';
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    right: 5px;
+    text-align: left;
+    width: 20px;
+    padding:3px;
+    z-index: 1;
+}
+.blogitemimglist{
+    width: 0px;
+    height: 0px;
+}
+.blogitemimgtxtcontent{
+    margin-left:20px;
+}

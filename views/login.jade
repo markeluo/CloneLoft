@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    div.rowcontent
+        form(id="login", method="POST", action="/login")
+            fieldset
+                legend 用户登录
+                label 用户名:
+                div.input-control.text(data-role='input-control')
+                    input#username(type='text',name='username',placeholder='请输入用户名！')
+                    button.btn-clear(tabindex='-1')
+                label 密码:
+                div.input-control.text(data-role='input-control')
+                    input#password(type='password',name='password',placeholder='请输入密码！')
+                    button.btn-reveal(tabindex='-1')
+                input(type='submit',value='登录')
+                h1!=message

@@ -1,0 +1,52 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='/stylesheets/metroui/css/metro-bootstrap.css')
+        link(rel='stylesheet', href='/stylesheets/metroui/css/metro-bootstrap-responsive.css')
+        link(rel='stylesheet', href='/stylesheets/metroui/css/iconFont.css')
+        link(rel='stylesheet', href='/stylesheets/metroui/css/docs.css')
+        link(rel='stylesheet', href='/stylesheets/metroui/js/prettify/prettify.css')
+
+        script(type='text/javascript',src='/javascripts/jquery-1.7.2.min.js')
+        script(type='text/javascript',src='/httpmanager.js')
+        script(type='text/javascript',src='/sigupmanager.js')
+        script(type='text/javascript',src='/stylesheets/metroui/js/jquery/jquery.widget.min.js')
+        script(type='text/javascript',src='/stylesheets/metroui/js/jquery/jquery.mousewheel.js')
+        script(type='text/javascript',src='/stylesheets/metroui/js/prettify/prettify.js')
+        script(type='text/javascript',src='/stylesheets/metroui/js/holder/holder.js')
+        script(type='text/javascript',src='/stylesheets/metroui/js/load-metro.js')
+    body.metro
+        header.bg-dark.col.rightalignsty
+            a(href="/",title='主页')
+                i.icon-home.fg-white
+            a(href="/publishblog",title='写博客')
+                i.icon-clipboard-2.fg-white
+            span.usernamesty #{username}
+            a(href="/logout",title='注销')
+                i.icon-switch.fg-white
+        div.rowcontent
+            form(id="signup", method="POST", action="/signup")
+                fieldset
+                    legend 用户注册
+                    label 用户名:
+                    div.input-control.text(data-role='input-control')
+                        input#username(type='text',name='username',placeholder='用户名不可为空!')
+                        button.btn-clear(tabindex='-1')
+                    label 密码:
+                    div.input-control.text(data-role='input-control')
+                        input#password(type='password',name='password',placeholder='密码不可为空!')
+                        button.btn-reveal(tabindex='-1')
+                    label 博客名称:
+                    div.input-control.text(data-role='input-control')
+                        input#blogname(type='text',name='ublogname',placeholder='博客名称')
+                        button.btn-clear(tabindex='-1')
+                    label 头像:
+                        div.input-control.file.info-state(data-role='input-control',style='height:105px;')
+                            div#userphotodiv
+                            input#blogphoto(type="file",name='logphoto',multiple='false',accept="*.gif,*.png,*.jpg,*.bmp,*.GIF,*.PNG,*.JPG,*.BMP",style='display:none;')
+                            input#blogphotodata(type="text",name='logphotodata',style='display:none;')
+                            button#btnselphoto.btn-file
+                    input(type='submit',value='注册')
+                    h1!=message

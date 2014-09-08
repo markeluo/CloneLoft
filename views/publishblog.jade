@@ -1,0 +1,106 @@
+//
+   Created with JetBrains WebStorm.
+   User: markeluo
+   Date: 14-6-24
+   Time: 上午9:10
+   To change this template use File | Settings | File Templates.
+doctype html
+html
+    head
+        title 写博客
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='/stylesheets/metroui/css/metro-bootstrap.css')
+        link(rel='stylesheet', href='/stylesheets/metroui/css/metro-bootstrap-responsive.css')
+        link(rel='stylesheet', href='/stylesheets/metroui/css/iconFont.css')
+        link(rel='stylesheet', href='/stylesheets/metroui/css/docs.css')
+        link(rel='stylesheet', href='/stylesheets/metroui/js/prettify/prettify.css')
+
+        script(type='text/javascript',src='/javascripts/jquery-1.7.2.min.js')
+        script(type='text/javascript',src='/index_controller.js')
+        script(type='text/javascript',src='/httpmanager.js')
+        script(type='text/javascript',src='/stylesheets/metroui/js/jquery/jquery.widget.min.js')
+        script(type='text/javascript',src='/stylesheets/metroui/js/jquery/jquery.mousewheel.js')
+        script(type='text/javascript',src='/stylesheets/metroui/js/prettify/prettify.js')
+        script(type='text/javascript',src='/stylesheets/metroui/js/holder/holder.js')
+        script(type='text/javascript',src='/stylesheets/metroui/js/load-metro.js')
+
+        script(type='text/javascript',src='/publishblog_controller.js')
+    body.metro
+        header.bg-dark.col.rightalignsty
+            a(href="/",title='主页')
+                i.icon-home.fg-white
+            a(href="/publishblog",title='写博客')
+                i.icon-clipboard-2.fg-white
+            span.usernamesty #{username}
+            a(href="/logout",title='注销')
+                i.icon-switch.fg-white
+        div.blogcontent
+            form(id="publishblog", method="POST", action="/publishblog")
+                fieldset
+                    div.tab-control(data-role="tab-control")#blogtypetab
+                        ul.tabs.blogmenu
+                            li.active
+                                a(href="#blog_text",style="border-left-width:0px;border-bottom-width:0px;border-right-width:0px;").blogmenu_text
+                            li
+                                a(href="#blog_img",style="border-left-width:0px;border-bottom-width:0px;border-right-width:0px;").blogmenu_img
+                            li
+                                a(href="#blog_music",style="border-left-width:0px;border-bottom-width:0px;border-right-width:0px;").blogmenu_music
+                            li
+                                a(href="#blog_redio",style="border-left-width:0px;border-bottom-width:0px;border-right-width:0px;").blogmenu_redio
+                        div.frames
+                            div#blog_text.frame
+                                div.blogtextcontent
+                                    div
+                                        div.input-control.text
+                                            input#blogtitle(type="text",placeholder='标题(可不填)').blogtitlesty
+                                    div
+                                        textarea#blogdetail.blogdetailsty
+                            div#blog_img.frame
+                                div.blogtextcontent
+                                    div
+                                        button#blogaddimg.shortcut.bg-darkCyan.fg-white(style="font-family:'微软雅黑'")
+                                            i.icon-pictures.fg-white.on_top
+                                            选择
+                                            small.bg-lightGreen.fg-white.info +
+                                        input#blogimgsel(type="file",multiple="true",accept="*.gif,*.png,*.jpg,*.bmp,*.GIF,*.PNG,*.JPG,*.BMP",style='display:none;')
+                                        div#blogimglist
+                                        div.clearbothdiv
+                                    div
+                                        textarea#blogimgdetail.blogdetailsty
+                            div#blog_music.frame
+                                div.blogtextcontent
+                                    div
+                                        div.input-control.text
+                                            input#blogmusicaddress(type="text",style="font-family:'微软雅黑'",data-address="",placeholder='请输入歌曲或歌手名称搜索!')
+                                            button#btnsarch.btn-search
+                                        div#musicsearchlist.musicsearchliststy(data-page="1")
+                                            ul
+                                    div
+                                        textarea#blogmusicdetail.blogdetailsty
+                            div#blog_redio.frame
+                                div.blogtextcontent
+                                    div.input-control.text
+                                        input#blogredioaddress(type="text",style="font-family:'微软雅黑'",placeholder='请输入视频资源的地址!')
+                                    div
+                                        textarea#blogrediodetail.blogdetailsty
+                    div.pubItems
+                        div.blogtagstydiv
+                            div.icon-tag.fg-darkCyan.blogtagimgsty
+                            div#blogtagcontentPanel.blogtagcontentsty
+                                div.blogtagtxtpanel
+                                    input#blogtag(type="text",placeholder='添加相关标签，用逗号分隔').blogtagtxtsty
+                                div.clearfloatsty
+                            div.clearfloatsty
+                        div.pubItemdiv
+                            select#blogpublicauth
+                                option(value="all") 授权方式选择
+                                option(value="all") 所有人可见
+                                option(value="onlyself") 仅自己可见
+                                option(value="frens") 好友可见
+                        div.pubItemdiv
+                            button#cancel.large(style="margin-top:10px;")
+                                i.icon-cancel.fg-cyan.on-left 取 消
+                            button#preview.large(style="margin-left:265px;margin-top:10px;")
+                                i.icon-eye-2.fg-lightGreen.on-left 预 览
+                            button#publish.large(style="margin-left:10px;margin-top:10px;")
+                                i.icon-tree-view.fg-darkCyan.on-left 发 布
